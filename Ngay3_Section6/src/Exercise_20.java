@@ -33,7 +33,7 @@ public class Exercise_20 {
         int lastDigit2 = number2 % 10;
         int lastDigit3 = number3 % 10;
 
-        return (lastDigit1 == lastDigit2 || lastDigit1 == lastDigit3 || lastDigit2 == lastDigit3? "Yes" : "No");
+        return (lastDigit1 == lastDigit2 || lastDigit1 == lastDigit3 || lastDigit2 == lastDigit3 ? "Yes" : "No");
     }
 
     public static String hasSameLastDigit2(int number1, int number2, int number3) {
@@ -48,9 +48,9 @@ public class Exercise_20 {
 
         boolean isSameLast = false;
 
-        for(int i = 0; i < numbers.size(); i++) {
-            for(int j = i + 1; j < numbers.size(); j++) {
-                if(numbers.get(i).lastDigit == numbers.get(j).lastDigit) {
+        for (int i = 0; i < numbers.size() - 1; i++) {
+            for (int j = i + 1; j < numbers.size(); j++) {
+                if (numbers.get(i).lastDigit == numbers.get(j).lastDigit) {
                     numbers.get(i).isSameLast = true;
                     numbers.get(j).isSameLast = true;
                     isSameLast = true;
@@ -61,7 +61,7 @@ public class Exercise_20 {
         if (isSameLast) {
             StringBuilder result = new StringBuilder("Yes: ");
             for (Number number : numbers) {
-                if(number.isSameLast) {
+                if (number.isSameLast) {
                     result.append(number.number).append(" ");
                 }
             }
