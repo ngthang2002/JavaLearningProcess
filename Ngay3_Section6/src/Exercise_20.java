@@ -21,11 +21,11 @@ public class Exercise_20 {
     }
 
     public static boolean isValid(int number) {
-        return number >= 10 && number <= 1000;
+        return number < 10 || number > 1000;
     }
 
     public static String hasSameLastDigit(int number1, int number2, int number3) {
-        if (!isValid(number1) || !isValid(number2) || !isValid(number3)) {
+        if (isValid(number1) || isValid(number2) || isValid(number3)) {
             return "Invalid input";
         }
 
@@ -37,7 +37,7 @@ public class Exercise_20 {
     }
 
     public static String hasSameLastDigit2(int number1, int number2, int number3) {
-        if (!isValid(number1) || !isValid(number2) || !isValid(number3)) {
+        if (isValid(number1) || isValid(number2) || isValid(number3)) {
             return "Invalid input";
         }
 
